@@ -1,3 +1,4 @@
+# Dette er opgavebeskrivelsen som jeg har efterladt - Læs rapport.md
 # Aflevering 5: Boids
 
 Boids er en flokadfærdssimulator. Den demonstrerer små digitale livsformer, der
