@@ -38,12 +38,17 @@ public class FlockSimulation {
 
     public void setBoidCount(int count) {
         while (boids.size() < count) {
-            addBoid();
+            // Tilføj 20% random boids og 80% standard flock boids
+            if (Math.random() < 0.2) {
+                addBoid(BoidType.RANDOM);
+            } else {
+                addBoid(BoidType.STANDARD);
+            }
         }
         while (boids.size() > count) {
             boids.remove(boids.size() - 1);
         }
-        
+
         for (int i = 0; i < boids.size(); i++) {
             Boid oldBoid = boids.get(i);
             boids.set(i, new Boid(i, oldBoid.getX(), oldBoid.getY(), oldBoid.getType()));
